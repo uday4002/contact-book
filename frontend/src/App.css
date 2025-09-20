@@ -1,0 +1,264 @@
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.app {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 20px 0;
+  word-break: break-word;
+}
+
+.status-bar {
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  word-break: break-word;
+}
+
+.status-bar.success {
+  background-color: #28a745;
+}
+
+.status-bar.error {
+  background-color: #dc3545;
+}
+
+.add-contact {
+  align-self: flex-start;
+  margin-bottom: 8px;
+  margin-left: 2px;
+}
+
+.contact-form {
+  width: 100%;
+  background: #f9fafb;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #dbdada;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.contact-form>div {
+  width: 100%;
+}
+
+.contact-form input {
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input.error-input {
+  border-color: #ef4444;
+  background-color: #ffe5e5;
+}
+
+.contact-form .error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin: 0;
+  min-height: 18px;
+}
+
+.contact-form button {
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  min-height: 46px;
+  width: 100%;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #dbdada;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.09);
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.contact-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #111827;
+  word-break: break-word;
+}
+
+.contact-card p {
+  margin: 3px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b5563;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  gap: 4px;
+}
+
+.actions button:first-child {
+  background: #fbbf24;
+  color: #1f2937;
+}
+
+.actions button:last-child {
+  background: #ef4444;
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #e5e7eb;
+  color: #111827;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .contact-form {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .contact-form>div {
+    flex-direction: row;
+    flex: 24%;
+  }
+
+  .contact-form input {
+    flex: 1;
+    min-width: auto;
+  }
+
+  .contact-form button {
+    flex: 1;
+    min-width: auto;
+  }
+
+  .contact-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact-card p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .contact-card {
+    padding: 10px;
+  }
+
+  .actions button {
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+}
