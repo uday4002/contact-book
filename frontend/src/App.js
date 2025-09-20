@@ -11,7 +11,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  const API = "http://localhost:5000";
+  const API = "https://contact-book-721c.onrender.com";
   const LIMIT = 5;
 
   useEffect(() => {
